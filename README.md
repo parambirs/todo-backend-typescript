@@ -1,11 +1,15 @@
-# todo-backend-express
+# todo-backend-typescript
 
-This is an example implementation of [moredip's](https://github.com/moredip) [Todo-Backend](http://todo-backend.thepete.net/) API spec, using Node.js and the Express framework.
+This is an example implementation of [moredip's](https://github.com/moredip)
+[Todo-Backend](http://todobackend.com/) API spec, using TypeScript, Node.js
+and the Express framework.
 
 This example saves TODOs in a PostgreSQL database and uses
 [node-db-migrate](https://github.com/kunklejr/node-db-migrate)
-for database migrations. A production instance is running on Heroku at
-[http://todo-backend-express.herokuapp.com](http://todo-backend-express.herokuapp.com).
+for database migrations. The code can be deployed to heroku.
+
+This code is based on the [todo-backend-express](https://github.com/dtao/todo-backend-express)
+example on the [http://todobackend.com/](http://todobackend.com/) site.
 
 ## 1. Install dependencies
 
@@ -123,4 +127,16 @@ X-Powered-By: Express
         "url": "http://localhost:5000/1"
     }
 ]
+```
+
+## 6. Deploy to Heroku
+
+```bash
+> heroku create
+> git push heroku master
+> heroku addons:create heroku-postgresql:hobby-dev
+> heroku run ./node_modules/db-migrate/bin/db-migrate up
+> heroku ps:scale web=1
+> heroku open
+> heroku logs --tail
 ```
