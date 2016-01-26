@@ -2,9 +2,9 @@
   "name": "todo-backend-typescript",
   "version": "0.1.0",
   "description": "a TypeScript/Node.js/Express implementation of the Todo-Backend API spec",
-  "main": "server.js",
+  "main": "app/server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node app/server.js"
   },
   "repository": {
     "type": "git",

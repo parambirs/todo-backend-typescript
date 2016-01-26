@@ -1,4 +1,4 @@
-/// <reference path="./typings/pg/pg.d.ts"/>
+/// <reference path="../typings/pg/pg.d.ts"/>
 
 var pg = require('pg.js');
 import Models = require('./models');

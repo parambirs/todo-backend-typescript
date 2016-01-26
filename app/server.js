@@ -1,5 +1,5 @@
-/// <reference path="./typings/express/express.d.ts"/>
-/// <reference path="./typings/body-parser/body-parser.d.ts"/>
+/// <reference path="../typings/express/express.d.ts"/>
+/// <reference path="../typings/body-parser/body-parser.d.ts"/>
 var app = require('express')(), bodyParser = require('body-parser'), backend = require('./backend');
 app.use(bodyParser.json());
 app.use(function (req, res, next) {

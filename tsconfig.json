@@ -4,11 +4,12 @@
     "noImplicitAny": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "sourceMap": false
+    "sourceMap": false,
+    "outDir": "app"
   },
   "files": [
-    "server.ts",
-    "backend.ts",
-    "models.ts"
+    "src/server.ts",
+    "src/backend.ts",
+    "src/models.ts"
   ]
 }
