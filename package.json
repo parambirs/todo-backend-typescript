@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "a TypeScript/Node.js/Express implementation of the Todo-Backend API spec",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/parambirs/todo-backend-typescript"
