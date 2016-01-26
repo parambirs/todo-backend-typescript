@@ -1,0 +1,35 @@
+{
+  "name": "todo-backend-typescript",
+  "version": "0.1.0",
+  "description": "a TypeScript/Node.js/Express implementation of the Todo-Backend API spec",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parambirs/todo-backend-typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/parambirs/todo-backend-typescript/issues"
+  },
+  "homepage": "https://github.com/parambirs/todo-backend-typescript",
+  "keywords": [
+    "todo-backend",
+    "api",
+    "typescript"
+  ],
+  "author": "Parambir Singh",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "db-migrate": "^0.9.23",
+    "express": "^4.13.3",
+    "pg": "^4.4.3",
+    "pg.js": "^4.1.1"
+  },
+  "devDependencies": {
+    "tsd": "^0.6.5",
+    "typescript": "^1.7.5"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+}
