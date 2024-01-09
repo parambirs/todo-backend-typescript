@@ -15,7 +15,7 @@ example on the [http://todobackend.com/](http://todobackend.com/) site.
 
 ``` bash
 > npm install
-> npm install -g tsc # typescript compiler
+> npm install -g typescript # typescript compiler
 > npm install -g tsd # typescript definition manager
 ```
 
