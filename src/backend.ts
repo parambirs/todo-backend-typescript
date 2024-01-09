@@ -10,6 +10,8 @@ type TodoCB = (err: Error, rows: Todo) => any;
 
 module.exports = function createTodoBackend(connectionString: string) {
   function query(query: string, params: any[], callback: TodosCB) {
+    console.log('connectionString', connectionString);
+    
     pg.connect(connectionString, function(err: Error, client: Client, done: () => void) {
       done();
 

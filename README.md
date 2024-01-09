@@ -27,17 +27,18 @@ example on the [http://todobackend.com/](http://todobackend.com/) site.
 
 ## 2. Set up postgres db (OSX)
 
-#### Install postgres
+#### Run postgres via docker
 
 ```bash
-> brew install postgres
+> docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
 ```
 
 #### Create user and database
 
 ```
-> /usr/local/Cellar/postgresql/9.4.5_2/bin/createuser -d -P -E db_user
-> /usr/local/Cellar/postgresql/9.4.5_2/bin/createdb --owner db_user --encoding utf8 tododb
+> docker exec -it some-postgres bash
+\# createuser -U postgres -d -P -E db_user
+\# createdb -U postgres --owner db_user --encoding utf8 tododb
 ```
 
 #### Create table
@@ -61,7 +62,7 @@ example on the [http://todobackend.com/](http://todobackend.com/) site.
 
 ```
 > set -x DATABASE_URL postgres://db_user:db_pass@localhost/tododb
-> node server.js
+> node app/server.js
 ```
 
 #### bash/zsh

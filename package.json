@@ -29,6 +29,7 @@
     "pg.js": "^4.1.1"
   },
   "devDependencies": {
+    "db-migrate-pg": "^1.5.2",
     "tsd": "^0.30.3",
     "typescript": "^5.3.3"
   },

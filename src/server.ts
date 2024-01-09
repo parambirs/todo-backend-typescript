@@ -58,6 +58,10 @@ function getCreateTodo(req: Request) {
   };
 }
 
+app.get('/healthcheck', function (req, res) {
+  res.status(200).send("OK");
+});
+
 app.get('/', function(req, res) {
   todos.all(createCallback(res, function(todos) {
     res.send(todos.map(getCreateTodo(req)));
@@ -94,4 +98,4 @@ app.delete('/:id', function(req, res) {
   }));
 });
 
-app.listen(Number(process.env.PORT || 5000));
+app.listen(Number(process.env.PORT || 5050));
