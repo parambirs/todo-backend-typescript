@@ -135,15 +135,3 @@ X-Powered-By: Express
     }
 ]
 ```
-
-## 6. Deploy to Heroku
-
-```bash
-> heroku create
-> git push heroku master
-> heroku addons:create heroku-postgresql:hobby-dev
-> heroku run ./node_modules/db-migrate/bin/db-migrate up
-> heroku ps:scale web=1
-> heroku open
-> heroku logs --tail
-```
