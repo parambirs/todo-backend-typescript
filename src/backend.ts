@@ -1,6 +1,5 @@
 /// <reference path="../typings/pg/pg.d.ts"/>
 
-var pg = require('pg.js');
 import Models = require('./models');
 import {QueryResult, Client} from "pg";
 import {Todo} from "./models";
@@ -10,11 +9,10 @@ type TodoCB = (err: Error, rows: Todo) => any;
 
 module.exports = function createTodoBackend(connectionString: string) {
   function query(query: string, params: any[], callback: TodosCB) {
-    console.log('connectionString', connectionString);
-    
-    pg.connect(connectionString, function(err: Error, client: Client, done: () => void) {
-      done();
+    // console.log('connectionString', connectionString);
+    const client = new Client(connectionString);
 
+    client.connect(function(err: Error) {
       if (err) {
         console.error(err);
         callback(err, null);

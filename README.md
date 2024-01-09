@@ -80,10 +80,14 @@ on OSX with brew.
 > brew install httpie
 ```
 
+You can also use the built-in `curl` command if you don't want to install `httpie`.
+
 #### Test 'create todo' api
 
 ```bash
-> http post :5000 title='Deploy on Heroku' order=1
+> curl -d '{"title": "Deploy on Heroku", "order": 1}' -H "Content-Type: application/json" -X POST http://localhost:5050
+
+> http post :5050 title='Deploy on Heroku' order=1
 
 HTTP/1.1 200 OK
 Access-Control-Allow-Headers: Content-Type
@@ -107,7 +111,9 @@ X-Powered-By: Express
 #### Test 'get all todos' api
 
 ```bash
-> http :5000
+> curl -v -X GET localhost:5050/
+
+> http :5050
 
 HTTP/1.1 200 OK
 Access-Control-Allow-Headers: Content-Type

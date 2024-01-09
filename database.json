@@ -2,7 +2,7 @@
     "dev": {
       "driver": "pg",
       "user": "db_user",
-      "password": "db_user",
+      "password": "db_pass",
       "host": "localhost",
       "database": "tododb",
       "port": "5432"
